@@ -38,11 +38,13 @@ git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 echo " >>> Downloading the new branch"
 
-git clone https://github.com/miguel0afd/gitflowTest.git ../gitflowMock
+git clone https://github.com/miguel0afd/gitflowTest.git -b release-$1 ../gitflowMock
 
 #### Executing make distribution script
 
 cd ../gitflowMock
+
+pwd
 
 echo " >>> Executing make distribution script"
 
@@ -59,6 +61,8 @@ git commit -m "tgz file added"
 git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 echo " >>> Finishing"
+
+pwd
 
 cd ../gitflowTest
 
