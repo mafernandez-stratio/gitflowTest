@@ -10,6 +10,12 @@ fi
 
 #### Using git-flow to create a new release branch
 
+git checkout develop
+
+git add *
+
+git commit
+
 echo " >>> Creating git release $1"
 
 git checkout -b release-$1 develop
