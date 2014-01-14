@@ -44,8 +44,6 @@ git clone https://github.com/miguel0afd/gitflowTest.git -b release-$1 ../gitflow
 
 cd ../gitflowMock
 
-pwd
-
 echo " >>> Executing make distribution script"
 
 ./mock-script.sh --tgz "$1"
@@ -61,8 +59,6 @@ git commit -m "tgz file added"
 git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 echo " >>> Finishing"
-
-pwd
 
 cd ../gitflowTest
 
