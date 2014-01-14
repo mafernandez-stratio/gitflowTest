@@ -30,15 +30,13 @@ git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 #### Downloading the new branch
 
-cd ..
-
 echo " >>> Downloading the new branch"
 
-git clone https://github.com/miguel0afd/gitflowTest.git gitflowMock
+git clone https://github.com/miguel0afd/gitflowTest.git ../gitflowMock
 
 #### Executing make distribution script
 
-cd gitflowMock
+cd ../gitflowMock
 
 echo " >>> Executing make distribution script"
 
@@ -56,6 +54,6 @@ git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 echo " >>> Finishing"
 
-git checkout develop
+cd ../gitflowTest
 
 echo " >>> SCRIPT SUCCESSFULLY EXECUTED <<< "
