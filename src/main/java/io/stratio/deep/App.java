@@ -1,8 +1,8 @@
 package io.stratio.deep;
 
 /**
- * Hello world!
- *
+ * Mock Stratio Deep project.
+ * @version 1.0
  */
 public class App 
 {
