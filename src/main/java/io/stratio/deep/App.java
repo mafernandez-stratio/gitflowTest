@@ -2,7 +2,7 @@ package io.stratio.deep;
 
 /**
  * Mock Stratio Deep project.
- * @version 1.6
+ * @version 0.9
  */
 public class App 
 {
