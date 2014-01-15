@@ -12,7 +12,9 @@ fi
 
 git checkout develop
 
-git commit -a -m "commit before creating release $1"
+git add *
+
+git commit -m "commit before creating release $1"
 
 echo " >>> Creating git release $1"
 
@@ -24,7 +26,9 @@ grep -rl " * @version *.*" . --exclude="deploy-deep*.sh" | xargs sed -i "s/ \* @
 
 echo " >>> Commiting release $1"
 
-git commit -a -m "Bumped version number to $1"
+git add *
+
+git commit -m "Bumped version number to $1"
 
 echo " >>> Uploading new release branch to remote repository"
 
@@ -47,6 +51,8 @@ echo " >>> Executing make distribution script"
 #### Uploading the tgz file to a remote repository
 
 echo " >>> Uploading the tgz file to a remote repository"
+
+git add *
 
 git commit -a -m "tgz file added"
 
