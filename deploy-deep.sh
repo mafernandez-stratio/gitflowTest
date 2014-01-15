@@ -54,12 +54,14 @@ echo " >>> Uploading the tgz file to a remote repository"
 
 git add *
 
-git commit -a -m "tgz file added"
+git commit -m "tgz file (version $1) added"
 
 git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 echo " >>> Finishing"
 
 cd ../gitflowTest
+
+git checkout develop
 
 echo " >>> SCRIPT SUCCESSFULLY EXECUTED <<< "
