@@ -12,7 +12,7 @@ fi
 
 git checkout develop
 
-git add *
+git add .
 
 git commit -m "commit before creating release $1"
 
@@ -26,7 +26,7 @@ grep -rl " * @version *.*" . --exclude="deploy-deep*.sh" | xargs sed -i "s/ \* @
 
 echo " >>> Commiting release $1"
 
-git add *
+git add .
 
 git commit -m "Bumped version number to $1"
 
@@ -52,7 +52,7 @@ git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 ##echo " >>> Uploading the tgz file to a remote repository"
 
-##git add *
+##git add .
 
 ##git commit -m "tgz file (version $1) added"
 
