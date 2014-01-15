@@ -26,6 +26,6 @@ echo " >>> Deleting local branch"
 
 git checkout develop
 
-git branch -d release-$1
+git branch -D release-$1
 
 echo " >>> SCRIPT SUCCESSFULLY EXECUTED <<< "

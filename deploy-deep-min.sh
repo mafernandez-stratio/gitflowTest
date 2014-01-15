@@ -26,9 +26,9 @@ grep -rl " * @version *.*" . --exclude=deploy-deep.sh | xargs sed -i "s/ \* @ver
 
 echo " >>> Commiting release $1"
 
-##git add *
+git add *
 
-git commit -m "Bumped version number to $1"
+git commit -a -m "Bumped version number to $1"
 
 echo " >>> Uploading new release branch to remote repository"
 
@@ -54,7 +54,7 @@ git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 
 ##git add repository/release-$1.tgz
 
-##git commit -m "tgz file added"
+##git commit -a -m "tgz file added"
 
 ##git push https://github.com/miguel0afd/gitflowTest.git release-$1:release-$1
 

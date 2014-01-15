@@ -6,7 +6,7 @@ import junit.framework.TestSuite;
 
 /**
  * Unit test for Mock Stratio Deep project.
- * @version 1.2
+ * @version 1.6
  */
 public class AppTest 
     extends TestCase
