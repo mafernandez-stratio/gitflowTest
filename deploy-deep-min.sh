@@ -22,7 +22,7 @@ git checkout -b release-$1 develop
 
 echo " >>> Bumping version to $1"
 
-grep -rl " * @version *.*" . --exclude=deploy-deep.sh | xargs sed -i "s/ \* @version *.*/ \* @version $1/g"
+grep -rl " * @version *.*" . --exclude="deploy-deep*.sh" | xargs sed -i "s/ \* @version *.*/ \* @version $1/g"
 
 echo " >>> Commiting release $1"
 
