@@ -12,9 +12,9 @@ fi
 
 git checkout develop
 
-git add *
+# git add *
 
-git commit -m "Commit before creating release $1"
+git commit -a -m "Commit before creating release $1"
 
 echo " >>> Creating git release $1"
 
@@ -26,7 +26,7 @@ grep -rl " * @version *.*" . --exclude="deploy-deep*.sh" | xargs sed -i "s/ \* @
 
 echo " >>> Commiting release $1"
 
-git add *
+# git add *
 
 git commit -a -m "Bumped version number to $1"
 
